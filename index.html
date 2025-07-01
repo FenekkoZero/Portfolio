@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <a href="#about" class="nav_links">Sobre Mi</a>
+    <a href="#proyectos" class="nav_links">Proyectos</a>
+    <a href="#habilidades" class="nav_links">Habilidades</a>
+    <a href="#contacto" class="nav_links">Contacto</a>
+</nav>
+
+    <header>
+        <div class="header_flexbox">
+            <div class="header_flexchild 1">
+                <img
+                    src="./assetts/avatar.svg"
+                    alt="triangle with all three sides equal"
+                    height="87"
+                    width="100" />
+            </div>
+        
+            <div class="header_flexchild 2">
+                <h1>Iván Darío Almeida</h1>
+                <p>Desarrollador Web Junior | Frontend | Backend</p>
+            </div>
+            
+            <div class="header_flexchild 3">
+                <div>
+                  <a href="https://github.com/FenekkoZero" class="header_links" target="_blank">
+                    <img src="./assetts/github-white.svg" alt="GitHub" class="imagen_redes"/>
+                    GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/iv%C3%A1n-dar%C3%ADo-almeida-prada-a24055372/"class="header_links" target="_blank">
+                    <img src="./assetts/linkedin.svg" alt="GitHub" class="imagen_redes"/>
+                    LinkedIn
+                  </a>
+                </div>
+
+                <div class="correo_container">
+                  <p class="header_correo">
+                    <img src="./assetts/mail.svg" alt="Correo" class="imagen_correo"/>
+                    ivan.almeida28@yahoo.com
+                  </p>
+                  <button class="copiar_btn" onclick="copiarCorreo()">Copiar</button>
+                  <div id="mensajeCopiado" class="toast">Copiado ✅</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<section id="about">
+    <h2>Acerca de mi</h2>
+    <div>
+        <div class="about_details">
+            <p class="about_text">Soy un ilustrador y Desarrollador Web, entusiasta del diseño.</p>
+        </div>
+    <!-- Botón para abrir el modal -->
+        <button onclick="abrirModal()">Ver CV</button>
+
+<!-- Ventana Modal -->
+        <div id="cvModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <iframe src="./assetts/cv.pdf" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Nombre del Proyecto</h3>
+      <p>Breve descripción del proyecto y qué tecnologías usaste.</p>
+      <p><a href="#" target="_blank">Ver repositorio</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades Técnicas</h2>
+  <div class="skills">
+    <div class="skill">
+        <img src="./assetts/HTML5.svg"  class="imagen_skill"/>
+        <p>HTML</p>
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/CSS.svg"  class="imagen_skill"/>
+      CSS
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/Javascript.svg"  class="imagen_skill"/>
+      JavaScript
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/react.svg"  class="imagen_skill"/>
+      React
+    </div>
+
+    <div class="skill">
+      <img src="./assetts/photoshop.svg"  class="imagen_skill"/>
+      Photoshop
+    </div>
+
+    <div class="skill">
+      <img src="./assetts/illustrator.svg" class="imagen_skill"/>
+      Illustrator
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Contáctame</h2>
+  <form>
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Tu Nombre | Desarrollador Web Junior
+</footer>
+
+</body>
+
+<!--Script para mostrar el CV-->
+<script>
+  function abrirModal() {
+    document.getElementById("cvModal").style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("cvModal").style.display = "none";
+  }
+
+  // Cerrar si haces clic fuera del modal
+  window.onclick = function(e) {
+    const modal = document.getElementById("cvModal");
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<script>
+  function copiarCorreo() {
+    const correo = document.querySelector(".header_correo").textContent;
+    const toast = document.getElementById("mensajeCopiado");
+
+    navigator.clipboard.writeText(correo)
+      .then(() => {
+        toast.classList.add("visible");
+        setTimeout(() => {
+          toast.classList.remove("visible");
+        }, 2000); // El mensaje desaparece después de 2 segundos
+      })
+      .catch(() => {
+        alert("Hubo un error al copiar 😞");
+      });
+  }
+</script>
+
+</html>
