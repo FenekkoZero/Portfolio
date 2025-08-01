@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="./styles/tailwind.css"> -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/bg_anim.css">
+  <link rel="stylesheet" href="./styles/cv_window.css">
+
+  <!-- Aquí se llaman a los scripts en JS -->
+  <script type="text/javascript" src="./js/show_cv.js"></script>
+  <script type="text/javascript" src="./js/copy_mail.js"></script>
+</head>
+<body>
+  <div class="background">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+</div>
+
+<nav>
+    <a href="#about" class="nav_links">Sobre Mi</a>
+    <a href="#proyectos" class="nav_links">Proyectos</a>
+    <a href="#habilidades" class="nav_links">Habilidades</a>
+    <a href="#contacto" class="nav_links">Contacto</a>
+</nav>
+
+    <header>
+        <div class="header_flexbox">
+            <div class="header_flexchild 1">
+                <img class="foto"
+                    src="./assetts/foto cv edit.jpg"
+                    alt=""
+                    
+                    width="120" />
+            </div>
+        
+            <div class="header_flexchild 2">
+                <h1>Iván Darío Almeida</h1>
+                <p>Desarrollador Web Junior | Frontend | Backend</p>
+            </div>
+            
+            <div class="header_flexchild 3">
+                <div>
+                  <a href="https://github.com/FenekkoZero" class="header_links" target="_blank">
+                    <img src="./assetts/github-white.svg" alt="GitHub" class="imagen_redes"/>
+                    GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/iv%C3%A1n-dar%C3%ADo-almeida-prada-a24055372/"class="header_links" target="_blank">
+                    <img src="./assetts/linkedin.svg" alt="GitHub" class="imagen_redes"/>
+                    LinkedIn
+                  </a>
+                </div>
+
+                <div class="correo_container">
+                  <p class="header_correo">
+                    <img src="./assetts/mail.svg" alt="Correo" class="imagen_correo"/>
+                    ivan.almeida28@yahoo.com
+                  </p>
+                  <button class="copiar_btn" onclick="copiarCorreo()">Copiar</button>
+                  <div id="mensajeCopiado" class="toast">Copiado ✅</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<section id="about">
+    <h2>Acerca de mi</h2>
+    <div>
+        <div class="about_details">
+            <p class="about_text">Desarrollador frontend junior con experiencia en HTML, CSS, Tailwind, JavaScript y React. <br>
+Me especializo en crear interfaces limpias, responsivas y centradas en el usuario, integrando diseño UI con lógica funcional. También tengo conocimientos en MySQL, Figma y Photoshop. </p>
+        </div>
+    <!-- Botón para abrir el modal -->
+        <div class="cvButton">
+          <button onclick="abrirModal()">Ver CV</button>
+        </div>
+
+<!-- Ventana Modal -->
+        <div id="cvModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <iframe src="./assetts/cv.pdf" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades Técnicas</h2>
+  <div class="skills">
+    <div class="skill">
+        <img src="./assetts/HTML5.svg"  class="imagen_skill"/>
+        <p>HTML</p>
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/CSS.svg"  class="imagen_skill"/>
+      CSS
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/tailwind.svg" class="imagen_skill"/>
+      Tailwind
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/Javascript.svg"  class="imagen_skill"/>
+      JavaScript
+    </div>
+    
+    <div class="skill">
+      <img src="./assetts/react.svg"  class="imagen_skill"/>
+      React
+    </div>
+
+    <div class="skill">
+      <img src="./assetts/photoshop.svg"  class="imagen_skill"/>
+      Photoshop
+    </div>
+
+    <div class="skill">
+      <img src="./assetts/illustrator.svg" class="imagen_skill"/>
+      Illustrator
+    </div>
+
+    <div class="skill">
+      <img src="./assetts/python.svg" class="imagen_skill"/>
+      Python
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Landing Page</h3>
+      <img src="./assetts/landing_page.png"  class="project_imagen"/>
+      <p>Ejemplo de página de inicio creada usando HTML y CSS</p>
+      <p><a href="https://fenekkozero.github.io/LandingPage/" target="_blank">Ver Demo</a></p>
+      <p><a href="https://github.com/FenekkoZero/LandingPage" target="_blank">Ver repositorio</a></p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contacto" class="contact">
+  <h2>Contáctame</h2>
+  <form>
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+<footer>
+  &copy; 2025 Tu Nombre | Desarrollador Web Junior
+</footer>
+
+</body>
+</html>
