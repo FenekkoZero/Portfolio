@@ -1,0 +1,70 @@
+@media (max-width: 870px) {
+    .header_pc{
+        display: none;
+    }
+
+    nav{
+        display: inline-block;
+        padding: 0%;
+    }
+
+    nav a{
+        display: none;
+    }
+
+    .header_mobile{
+        display: grid;
+        background-color: #060b16ce;
+        color: #fff;
+        
+        text-align: center;
+        z-index: 19;
+        height: 40vh;
+        font-family: veka;
+        padding-top: 0;
+    }
+
+    .header_mobile h1 {
+  font-family: times;
+  font-size: 5vh;
+  margin-top: 2vh;
+  margin-bottom: 0.5rem;
+}
+
+    
+    .foto{
+        width: 16vh;
+        margin-top: 11vh;
+    }
+
+    .header_flexchild:first-child {
+    flex:0;
+    margin-right: 0vh;
+    margin-left: 4vh;
+}
+
+.header_flexchild_4{
+    margin-top: 4vh;
+}
+.correo_container{
+    margin-top: 1vh;
+}
+
+
+.about_details {
+    font-size: 3vh;
+
+    padding: 3.5vh;
+    border-radius: 8px;
+}
+
+.skills{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media (max-width: 432px){
+    .skills{
+        grid-template-columns: 1fr 1fr;
+    }
+}

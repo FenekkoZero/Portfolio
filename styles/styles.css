@@ -12,12 +12,15 @@
   box-sizing: border-box;
 }
 
+
+
 /* FORMATO DE LA BARRA DE NAVEGACIÓN */
 nav {
   background-color: #0b111d;
   display: flex;
   justify-content: center;
   height: 8vh;
+  width: 100%;
   gap: 2rem;
   padding: 1rem;
   position: sticky;
@@ -59,10 +62,14 @@ body {
   background-color: #f4f4f4;         /* Color de respaldo si no carga */
 }
 
-
-/* FORMATO DEL HEADER */
-header {
+.header_mobile{
+  display: none;
+}
+header{
   background-color: #060b16ce;
+}
+/* FORMATO DEL HEADER */
+.header_pc {
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;
@@ -71,17 +78,17 @@ header {
   font-family: veka;
 }
 
-header h1 {
+.header_pc h1 {
   font-family: times;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-header a{
+.header_pc a{
   font-size: 1.2rem;
 }
 
-header p {
+.header_pc {
   font-size: 1.2rem;
 }
 
@@ -347,6 +354,7 @@ footer {
 
 .foto{
   border-radius: 50%;
+  width: 18vh;
 }
 
 .cvButton{
