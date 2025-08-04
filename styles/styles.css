@@ -273,6 +273,7 @@ section {
   
   background-color: #060b16ce;
   border-radius: 8px;
+  height: 70vh;
   color: #f4f4f4;
   font-size: 3vh;
   padding: 5vh;
@@ -284,8 +285,14 @@ section {
   transform: scale(1.1);
 }
 
+.project_desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .project a {
-  color: white;
+  color: rgb(190, 192, 255);
   text-decoration: none;
   transition: transform 0.2s;
 }
@@ -295,7 +302,7 @@ section {
 }
 
 .project a:visited {
-  color: white;
+  color: rgb(190, 192, 255);
   text-decoration: none;
 }
 
@@ -367,6 +374,7 @@ button:hover {
 }
 
 footer {
+  display: none;
   text-align: center;
   padding: 2rem 1rem;
   background-color: #e5e7eb;
