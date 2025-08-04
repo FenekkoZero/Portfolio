@@ -52,7 +52,9 @@
         font-family: veka;
         padding-top: 0;
     }
-
+.texto_header_mobile{
+    font-size: 3vh;
+}
     .mobile_nombre h1 {
   font-family: times;
   font-size: 5vh;
@@ -63,6 +65,10 @@
     color: #ffffff;
   transition: transform 0.2s; 
   text-decoration: none;}
+
+  .mobile_redes{
+    margin-top: 2vh;
+  }
     
     .foto{
         width: 16vh;
@@ -90,7 +96,7 @@
 }
 
 .about_details {
-    font-size: 2.7vh;
+    font-size: 2.5vh;
 
     padding: 3.5vh;
     border-radius: 8px;
