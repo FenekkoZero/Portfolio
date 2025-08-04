@@ -285,6 +285,7 @@ section {
 }
 
 .project a {
+  color: white;
   text-decoration: none;
   transition: transform 0.2s;
 }

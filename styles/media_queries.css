@@ -53,13 +53,16 @@
         padding-top: 0;
     }
 
-    .header_mobile h1 {
+    .mobile_nombre h1 {
   font-family: times;
   font-size: 5vh;
   margin-top: 2vh;
   margin-bottom: 0.5rem;
 }
-
+.mobile_links{
+    color: #ffffff;
+  transition: transform 0.2s; 
+  text-decoration: none;}
     
     .foto{
         width: 16vh;
