@@ -30,7 +30,7 @@
     top: 100%;
     z-index: 999;
     list-style: none;
-    font-size: 6vh;
+    font-size: 4vh;
 }
 .nav_list.show {
     display: flex; /* Mostrar cuando se activa */
@@ -68,7 +68,7 @@
   text-decoration: none;}
 
   .mobile_redes{
-    margin-top: 2vh;
+    margin-top: 3vh;
   }
     
     .foto{
