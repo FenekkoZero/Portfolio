@@ -30,6 +30,7 @@
     top: 100%;
     z-index: 999;
     list-style: none;
+    font-size: 6vh;
 }
 .nav_list.show {
     display: flex; /* Mostrar cuando se activa */
@@ -53,7 +54,7 @@
         padding-top: 0;
     }
 .texto_header_mobile{
-    font-size: 3vh;
+    font-size: 2.7vh;
 }
     .mobile_nombre h1 {
   font-family: times;
