@@ -3,17 +3,46 @@
         display: none;
     }
 
-    nav{
-        display: inline-block;
+    nav {
+        display: flex;
         padding: 0%;
+        justify-content: space-between; /* Asegura separación entre logo y menú */
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
-    nav a{
+    .nav_links_container{
         display: none;
     }
+    
+.burg_menu_container {
+    display: flex;
+    align-items: center;
+    position: relative; /* importante para posicionar el .nav_list relativo a esto */
+    margin-left: auto;
+}
+.nav_list{
+    right: 0;
+    left: auto;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    list-style: none;
+}
+.nav_list.show {
+    display: flex; /* Mostrar cuando se activa */
+}
 
-    .header_mobile{
+.header_mobile{
+    display: grid;
+    width: 100%;;
+}
+    
+.contenedor_mobile{
         display: grid;
+        grid-template-columns: 1fr 4fr;;
         background-color: #060b16ce;
         color: #fff;
         
@@ -50,6 +79,12 @@
     margin-top: 1vh;
 }
 
+.copiar_btn{
+    display: none;
+}
+.toast{
+    display: none;
+}
 
 .about_details {
     font-size: 3vh;
@@ -63,8 +98,9 @@
 }
 }
 
-@media (max-width: 432px){
+@media (max-width: 480px){
     .skills{
         grid-template-columns: 1fr 1fr;
     }
+
 }
